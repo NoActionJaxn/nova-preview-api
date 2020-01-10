@@ -9,9 +9,15 @@ To run this application you must do the following
 4. Add the following values to your .env file
 
 PORT= Application Nework Port 
+
 DATABASE= Postgres Database
+
 DATABASE_USER= Postgres Super User
+
 DATABASE_PASSWORD= Postgres Password for User
+
 JWT_SECRET= Secret Application Key
+
 SALTING_ROUNDS= Amount of passes run when salting passwords
+
 DEBUG=express:* & node index.js (optional - Use for debugging)
