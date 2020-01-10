@@ -1,25 +1,50 @@
+import 'dotenv/config';
+import bcrypt from 'bcrypt';
+
 const user = (sequelize, DataTypes) => {
   const User = sequelize.define('user', {
     type: {
       type: DataTypes.STRING,
+      trim: true,
       allowNull: false
     },
-    first_name: DataTypes.STRING,
-    last_name: DataTypes.STRING,
+    first_name: {
+      type: DataTypes.STRING,
+      trim: true
+    },
+    last_name: {
+      type: DataTypes.STRING,
+      trim: true
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true
+      unique: true,
+      trim: true
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      trim: true
     },
     telephone: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true
+      unique: true,
+      trim: true
     }
+  });
+
+  // eslint-disable-next-line no-unused-vars
+  User.beforeCreate((user, options) => {
+    return bcrypt
+      .hash(user.password, parseInt(process.env.SALTING_ROUNDS))
+      .then(hash => {
+        user.password = hash;
+      })
+      .catch(err => {
+        throw new Error(err.message);
+      });
   });
 
   User.associate = models => {

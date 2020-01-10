@@ -6,7 +6,7 @@ export const createEntries = async models => {
       city: 'Buford',
       state: 'Georgia',
       postal_code: '30519',
-      telephone: '555-555-5555',
+      telephone: '5555555555',
       users: [
         {
           type: 'Administrator',
@@ -14,7 +14,7 @@ export const createEntries = async models => {
           last_name: 'Hermitt',
           email: 'action@mobileapphero.com',
           password: 'testpass',
-          telephone: '555-983-1220'
+          telephone: '5559831220'
         },
         {
           type: 'Doctor',
@@ -22,7 +22,7 @@ export const createEntries = async models => {
           last_name: 'Sanders',
           email: 'malika_stros@gmail.com',
           password: 'testpass',
-          telephone: '555-335-7153'
+          telephone: '5553357153'
         },
         {
           type: 'Nurse',
@@ -30,7 +30,7 @@ export const createEntries = async models => {
           last_name: 'Karim',
           email: 'bailee.pfannersti@yahoo.com',
           password: 'testpass',
-          telephone: '555-213-0900'
+          telephone: '5552130900'
         }
       ]
     },
@@ -49,22 +49,22 @@ export const createEntries = async models => {
       state: 'Georgia',
       postal_code: '31401',
       email: 'anya.koelpi1@yahoo.com',
-      telephone: '555-234-5832',
+      telephone: '5552345832',
       messages: [
         {
-          patient_telephone: '555-234-5832',
+          patient_telephone: '5552345832',
           message_audio_url: 'https://aws.server.com/message1',
           message_transcript: 'Testing, Testing, 1 2 3.',
           status: 'complete'
         },
         {
-          patient_telephone: '555-234-5832',
+          patient_telephone: '5552345832',
           message_audio_url: 'https://aws.server.com/message2',
           message_transcript: 'Testing, Testing, 1 2 3.',
           status: 'complete'
         },
         {
-          patient_telephone: '555-234-5832',
+          patient_telephone: '5552345832',
           message_audio_url: 'https://aws.server.com/message4',
           message_transcript: 'Testing, Testing, 1 2 3.',
           status: 'complete'
@@ -86,22 +86,22 @@ export const createEntries = async models => {
       state: 'Georgia',
       postal_code: '30303',
       email: 'harold1996@gmail.com',
-      telephone: '555-285-8116',
+      telephone: '5552858116',
       messages: [
         {
-          patient_telephone: '555-234-5832',
+          patient_telephone: '5552345832',
           message_audio_url: 'https://aws.server.com/message3',
           message_transcript: 'Testing, Testing, 1 2 3.',
           status: 'complete'
         },
         {
-          patient_telephone: '555-234-5832',
+          patient_telephone: '5552345832',
           message_audio_url: 'https://aws.server.com/message5',
           message_transcript: 'Testing, Testing, 1 2 3.',
           status: 'complete'
         },
         {
-          patient_telephone: '555-234-5832',
+          patient_telephone: '5552345832',
           message_audio_url: 'https://aws.server.com/message6',
           message_transcript: 'Testing, Testing, 1 2 3.',
           status: 'complete'
@@ -120,7 +120,7 @@ export const createEntries = async models => {
       city: 'Braselton',
       state: 'Georgia',
       postal_code: '30517',
-      telephone: '555-444-4444',
+      telephone: '5554444444',
       users: [
         {
           type: 'Administrator',
@@ -128,7 +128,7 @@ export const createEntries = async models => {
           last_name: 'Admin',
           email: 'test@admin.com',
           password: 'testpass',
-          telephone: '555-444-4444'
+          telephone: '5554444444'
         },
         {
           type: 'Doctor',
@@ -136,7 +136,7 @@ export const createEntries = async models => {
           last_name: 'Smith',
           email: 'alize_runolfsdott@gmail.com',
           password: 'testpass',
-          telephone: '555-669-8292'
+          telephone: '5556698292'
         },
         {
           type: 'Nurse',
@@ -144,7 +144,7 @@ export const createEntries = async models => {
           last_name: 'Hopkins',
           email: 'camila1995@yahoo.com',
           password: 'testpass',
-          telephone: '555-515-6889'
+          telephone: '5555156889'
         }
       ]
     },
