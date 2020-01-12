@@ -18,6 +18,20 @@ router.get('/:locationId', utils.validateToken, async (req, res) => {
   return res.send(location);
 });
 
+router.get('/messages/:telephone', utils.validateToken, async (req, res) => {
+  const messages = await req.context.models.Message.findAll({
+    where: { location_telephone: req.params.telephone }
+  }).catch(err => err);
+  return res.send(messages);
+});
+
+router.get('/users/:type', utils.validateToken, async (req, res) => {
+  const messages = await req.context.models.User.findAll({
+    where: { type: req.params.type }
+  }).catch(err => err);
+  return res.send(messages);
+});
+
 router.post('/', utils.validateToken, async (req, res) => {
   const location = await req.context.models.Location.create({
     name: req.body.name,

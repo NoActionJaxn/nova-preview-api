@@ -16,6 +16,13 @@ router.get('/:patientId', utils.validateToken, async (req, res) => {
   return res.send(patient);
 });
 
+router.get('/messages/:telephone', utils.validateToken, async (req, res) => {
+  const messages = await req.context.models.Message.findAll({
+    where: { patient_telephone: req.params.telephone }
+  }).catch(err => err);
+  return res.send(messages);
+});
+
 router.post('/', utils.validateToken, async (req, res) => {
   const patient = await req.context.models.Patient.create({
     first_name: req.body.first_name,

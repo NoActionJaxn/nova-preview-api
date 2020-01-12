@@ -94,18 +94,24 @@ export const createEntries = async models => {
       messages: [
         {
           locationId: 1,
+          location_telephone: '5555555555',
+          patient_telephone: '5552345832',
           message_audio_url: 'https://aws.server.com/message1',
           message_transcript: 'Testing, Testing, 1 2 3.',
           status: 'complete'
         },
         {
           locationId: 1,
+          location_telephone: '5555555555',
+          patient_telephone: '5552345832',
           message_audio_url: 'https://aws.server.com/message2',
           message_transcript: 'Testing, Testing, 1 2 3.',
           status: 'complete'
         },
         {
           locationId: 1,
+          location_telephone: '5555555555',
+          patient_telephone: '5552345832',
           message_audio_url: 'https://aws.server.com/message4',
           message_transcript: 'Testing, Testing, 1 2 3.',
           status: 'complete'
@@ -132,18 +138,24 @@ export const createEntries = async models => {
       messages: [
         {
           locationId: 2,
+          location_telephone: '5554444444',
+          patient_telephone: '5552858116',
           message_audio_url: 'https://aws.server.com/message3',
           message_transcript: 'Testing, Testing, 1 2 3.',
           status: 'complete'
         },
         {
           locationId: 2,
+          location_telephone: '5554444444',
+          patient_telephone: '5552858116',
           message_audio_url: 'https://aws.server.com/message5',
           message_transcript: 'Testing, Testing, 1 2 3.',
           status: 'complete'
         },
         {
           locationId: 2,
+          location_telephone: '5554444444',
+          patient_telephone: '5552858116',
           message_audio_url: 'https://aws.server.com/message6',
           message_transcript: 'Testing, Testing, 1 2 3.',
           status: 'complete'

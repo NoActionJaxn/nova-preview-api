@@ -21,7 +21,7 @@ const message = (sequelize, DataTypes) => {
       targetKey: 'telephone'
     });
     Message.belongsTo(models.Location, {
-      foreignKey: 'location_phone',
+      foreignKey: 'location_telephone',
       targetKey: 'telephone'
     });
   };
