@@ -22,14 +22,16 @@ const location = (sequelize, DataTypes) => {
     },
     telephone: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      unique: true
     }
   });
 
   Location.associate = models => {
     Location.hasMany(models.User, { onDelete: 'CASCADE' });
+    Location.hasMany(models.Patient, { onDelete: 'CASCADE' });
+    Location.hasMany(models.Message, { onDelete: 'CASCADE' });
   };
-
   return Location;
 };
 

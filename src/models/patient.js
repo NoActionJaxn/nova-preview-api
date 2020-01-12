@@ -15,10 +15,11 @@ const patient = (sequelize, DataTypes) => {
   });
 
   Patient.associate = models => {
-    Patient.belongsTo(models.User);
-  };
-
-  Patient.associate = models => {
+    Patient.belongsTo(models.User, {
+      foreignKey: 'assigned',
+      targetKey: 'id'
+    });
+    Patient.belongsTo(models.Location);
     Patient.hasMany(models.Message, { onDelete: 'CASCADE' });
   };
 

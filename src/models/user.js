@@ -49,9 +49,6 @@ const user = (sequelize, DataTypes) => {
 
   User.associate = models => {
     User.belongsTo(models.Location);
-  };
-
-  User.associate = models => {
     User.hasMany(models.Patient, { onDelete: 'CASCADE' });
   };
 

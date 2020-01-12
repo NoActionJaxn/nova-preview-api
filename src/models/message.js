@@ -16,7 +16,14 @@ const message = (sequelize, DataTypes) => {
   });
 
   Message.associate = models => {
-    Message.belongsTo(models.Patient);
+    Message.belongsTo(models.Patient, {
+      foreignKey: 'patient_telephone',
+      targetKey: 'telephone'
+    });
+    Message.belongsTo(models.Location, {
+      foreignKey: 'location_phone',
+      targetKey: 'telephone'
+    });
   };
 
   return Message;

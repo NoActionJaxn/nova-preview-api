@@ -35,81 +35,7 @@ export const createEntries = async models => {
       ]
     },
     {
-      include: [models.User]
-    }
-  );
-
-  await models.Patient.create(
-    {
-      userId: 2,
-      first_name: 'Kurt',
-      last_name: 'Branscome',
-      street_address: '441 Hampton Meadows',
-      city: 'Savannah',
-      state: 'Georgia',
-      postal_code: '31401',
-      email: 'anya.koelpi1@yahoo.com',
-      telephone: '5552345832',
-      messages: [
-        {
-          patient_telephone: '5552345832',
-          message_audio_url: 'https://aws.server.com/message1',
-          message_transcript: 'Testing, Testing, 1 2 3.',
-          status: 'complete'
-        },
-        {
-          patient_telephone: '5552345832',
-          message_audio_url: 'https://aws.server.com/message2',
-          message_transcript: 'Testing, Testing, 1 2 3.',
-          status: 'complete'
-        },
-        {
-          patient_telephone: '5552345832',
-          message_audio_url: 'https://aws.server.com/message4',
-          message_transcript: 'Testing, Testing, 1 2 3.',
-          status: 'complete'
-        }
-      ]
-    },
-    {
-      include: [models.Message]
-    }
-  );
-
-  await models.Patient.create(
-    {
-      userId: 2,
-      first_name: 'Audrey',
-      last_name: 'Chaney',
-      street_address: '2792 Layman Court',
-      city: 'Atlanta',
-      state: 'Georgia',
-      postal_code: '30303',
-      email: 'harold1996@gmail.com',
-      telephone: '5552858116',
-      messages: [
-        {
-          patient_telephone: '5552345832',
-          message_audio_url: 'https://aws.server.com/message3',
-          message_transcript: 'Testing, Testing, 1 2 3.',
-          status: 'complete'
-        },
-        {
-          patient_telephone: '5552345832',
-          message_audio_url: 'https://aws.server.com/message5',
-          message_transcript: 'Testing, Testing, 1 2 3.',
-          status: 'complete'
-        },
-        {
-          patient_telephone: '5552345832',
-          message_audio_url: 'https://aws.server.com/message6',
-          message_transcript: 'Testing, Testing, 1 2 3.',
-          status: 'complete'
-        }
-      ]
-    },
-    {
-      include: [models.Message]
+      include: [models.User, models.Patient, models.Message]
     }
   );
 
@@ -150,6 +76,82 @@ export const createEntries = async models => {
     },
     {
       include: [models.User]
+    }
+  );
+
+  await models.Patient.create(
+    {
+      locationId: 1,
+      assigned: 5,
+      first_name: 'Kurt',
+      last_name: 'Branscome',
+      street_address: '441 Hampton Meadows',
+      city: 'Savannah',
+      state: 'Georgia',
+      postal_code: '31401',
+      email: 'anya.koelpi1@yahoo.com',
+      telephone: '5552345832',
+      messages: [
+        {
+          locationId: 1,
+          message_audio_url: 'https://aws.server.com/message1',
+          message_transcript: 'Testing, Testing, 1 2 3.',
+          status: 'complete'
+        },
+        {
+          locationId: 1,
+          message_audio_url: 'https://aws.server.com/message2',
+          message_transcript: 'Testing, Testing, 1 2 3.',
+          status: 'complete'
+        },
+        {
+          locationId: 1,
+          message_audio_url: 'https://aws.server.com/message4',
+          message_transcript: 'Testing, Testing, 1 2 3.',
+          status: 'complete'
+        }
+      ]
+    },
+    {
+      include: [models.Message]
+    }
+  );
+
+  await models.Patient.create(
+    {
+      locationId: 2,
+      assigned: 5,
+      first_name: 'Audrey',
+      last_name: 'Chaney',
+      street_address: '2792 Layman Court',
+      city: 'Atlanta',
+      state: 'Georgia',
+      postal_code: '30303',
+      email: 'harold1996@gmail.com',
+      telephone: '5552858116',
+      messages: [
+        {
+          locationId: 2,
+          message_audio_url: 'https://aws.server.com/message3',
+          message_transcript: 'Testing, Testing, 1 2 3.',
+          status: 'complete'
+        },
+        {
+          locationId: 2,
+          message_audio_url: 'https://aws.server.com/message5',
+          message_transcript: 'Testing, Testing, 1 2 3.',
+          status: 'complete'
+        },
+        {
+          locationId: 2,
+          message_audio_url: 'https://aws.server.com/message6',
+          message_transcript: 'Testing, Testing, 1 2 3.',
+          status: 'complete'
+        }
+      ]
+    },
+    {
+      include: [models.Message]
     }
   );
 };
